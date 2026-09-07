@@ -1,0 +1,24 @@
+[project]
+name = "dissertation-experiments"
+version = "0.1.0"
+description = "Reproducible BOCPD, deep-momentum, and uncertainty-gating experiments"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "keras==3.15.1",
+    "numpy==2.5.1",
+    "pandas==3.0.5",
+    "pyarrow==21.0.0",
+    "scipy==1.18.0",
+    "torch==2.13.0+cpu",
+]
+
+[tool.uv]
+package = false
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
